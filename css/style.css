@@ -1,0 +1,195 @@
+/*Hent vores font*/
+.irish-grover-regular {
+  font-family: "Irish Grover", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --font-body: "Irish Grover", system-ui;
+  /* Farver */
+  --color-water1: #1d5a77;
+  --color-water2: #44b9f1;
+
+  /* Billede størrelser (px) */
+  --fish-w: 200px;
+
+  /* Start /exit offset (px) */
+  --off-fish1: 200px;
+  --off-fish2: 200px;
+  --off-fish3: 200px;
+  --off-fish4: 200px;
+  --off-fish5: 200px;
+  --off-fish6: 200px;
+}
+
+/* ---------------------------------------------------------
+   Global reset
+--------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-body);
+}
+
+/* ---------------------------------------------------------
+   Scene styling
+--------------------------------------------------------- */
+.scene {
+  position: relative;
+  height: 100vh;
+  overflow: hidden; /* Overflow undersøger den studerende */
+  background: linear-gradient(var(--color-water2), var(--color-water1));
+}
+
+/* ---------------------------------------------------------
+   Background styling
+--------------------------------------------------------- */
+.bg {
+  position: absolute;
+  inset: auto 0 0 0; /* inset egenskaben undersøger den studerende  */
+  width: 100%;
+  height: 870px;
+  background: url(../img/Baggrund.png);
+  background-size: 100vw auto;
+  background-repeat: repeat-x; /* Den studerende undersøger egenskaber - background-repeat */
+  animation: animateBg 17s linear infinite;
+}
+
+/* ---------------------------------------------------------
+   Biler
+   - px for selve billedstørrelsen
+   - vw/vh til placering og ALLE animationsafstande
+--------------------------------------------------------- */
+
+.fish1 {
+  position: absolute;
+  bottom: -0.5vh;
+  width: var(--fish-w);
+  max-width: 28vw;
+  z-index: 3;
+  left: calc(-1 * var(--off-fish1));
+  animation: fish1 12s linear infinite;
+}
+
+@keyframes fish1 {
+  0% {
+    transform: translateX(0);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(100vw + var(--off-fish1)));
+  }
+}
+
+.fish2 {
+  position: absolute;
+  bottom: 10.8vh;
+  width: var(--fish-w);
+  max-width: 28vw;
+  z-index: 3;
+  left: calc(-1 * var(--off-fish2));
+  animation: fish2 18s linear infinite;
+}
+
+@keyframes fish2 {
+  0% {
+    transform: translateX(0);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(100vw + var(--off-fish2)));
+  }
+}
+
+.fish3 {
+  position: absolute;
+  bottom: 20.8vh;
+  width: var(--fish-w);
+  max-width: 28vw;
+  z-index: 3;
+  left: calc(-1 * var(--off-fish3));
+  animation: fish3 25s linear infinite;
+}
+
+@keyframes fish3 {
+  0% {
+    transform: translateX(0);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(100vw + var(--off-fish3)));
+  }
+}
+
+.fish4 {
+  position: absolute;
+  bottom: 60vh;
+  width: var(--fish-w);
+  max-width: 28vw;
+  z-index: 3;
+  right: calc(-1 * var(--off-fish2));
+  /* left: calc(-1 * var(--off-fish4)); */
+  animation: fish4 10s linear infinite;
+}
+
+/* @keyframes fish4 {
+  0% {
+    transform: translateX(0);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(100vw + var(--off-fish4)));
+  }
+} */
+
+@keyframes fish4 {
+  0% {
+    transform: translateX(0) rotateY(0deg);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(-100vw - var(--off-fish4))) rotateY(0deg);
+  }
+}
+
+.fish5 {
+  position: absolute;
+  bottom: 40.8vh;
+  width: var(--fish-w);
+  max-width: 28vw;
+  z-index: 3;
+  left: calc(-1 * var(--off-fish5));
+  animation: fish5 20s linear infinite;
+}
+
+@keyframes fish5 {
+  0% {
+    transform: translateX(0);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(100vw + var(--off-fish5)));
+  }
+}
+
+.fish6 {
+  position: absolute;
+  bottom: 70.8vh;
+  width: var(--fish-w);
+  max-width: 28vw;
+  z-index: 3;
+  left: calc(-1 * var(--off-fish6));
+  animation: fish6 18s linear infinite;
+}
+
+@keyframes fish6 {
+  0% {
+    transform: translateX(0);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(100vw + var(--off-fish6)));
+  }
+}
