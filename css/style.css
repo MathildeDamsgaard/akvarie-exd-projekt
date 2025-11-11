@@ -48,15 +48,17 @@
 --------------------------------------------------------- */
 .bg {
   position: absolute;
-  inset: auto 0 0 0; /* inset egenskaben undersøger den studerende  */
-  width: 100%;
+  top: 0;
+  left: 0;
+  width: 100vw;
   height: 870px;
+  margin: 0;
   background: url(../img/Baggrund.png);
   background-size: 100vw auto;
   background-repeat: repeat-x; /* Den studerende undersøger egenskaber - background-repeat */
   animation: animateBg 17s linear infinite;
 }
-
+/* inset: auto 0 0 0; /* inset egenskaben undersøger den studerende  */
 /* ---------------------------------------------------------
    Biler
    - px for selve billedstørrelsen
