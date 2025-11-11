@@ -1,10 +1,3 @@
-/*Hent vores font*/
-.irish-grover-regular {
-  font-family: "Irish Grover", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
 :root {
   --font-body: "Irish Grover", system-ui;
   /* Farver */
@@ -40,7 +33,45 @@
   position: relative;
   height: 100vh;
   overflow: hidden; /* Overflow undersøger den studerende */
-  background: linear-gradient(var(--color-water2), var(--color-water1));
+  background: linear-gradient(
+    to bottom right,
+    var(--color-water2),
+    var(--color-water1)
+  );
+}
+
+/* ---------------------------------------------------------
+  Overlay text style 
+--------------------------------------------------------- */
+.overlay-text {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+   z-index: 7;
+}
+
+/* ---------------------------------------------------------
+  Font for the heading
+--------------------------------------------------------- */
+.overlay-text h1 {
+  font-family: 'Irish Grover', cursive;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+/* ---------------------------------------------------------
+  Font for p
+--------------------------------------------------------- */
+.overlay-text p {
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  font-size: 1.4rem;
+  opacity: 0.9;
 }
 
 /* ---------------------------------------------------------
@@ -57,6 +88,7 @@
   background-size: 100vw auto;
   background-repeat: repeat-x; /* Den studerende undersøger egenskaber - background-repeat */
   animation: animateBg 17s linear infinite;
+  z-index: 1;
 }
 /* inset: auto 0 0 0; /* inset egenskaben undersøger den studerende  */
 /* ---------------------------------------------------------
@@ -65,12 +97,13 @@
    - vw/vh til placering og ALLE animationsafstande
 --------------------------------------------------------- */
 
+/* Crab */
 .fish1 {
   position: absolute;
-  bottom: -0.5vh;
+  bottom: 0vh;
   width: var(--fish-w);
-  max-width: 28vw;
-  z-index: 3;
+  max-width: 10vw;
+  z-index: 1;
   left: calc(-1 * var(--off-fish1));
   animation: fish1 12s linear infinite;
 }
@@ -85,11 +118,12 @@
   }
 }
 
+/* Nemo */
 .fish2 {
   position: absolute;
-  bottom: 10.8vh;
+  bottom: 15vh;
   width: var(--fish-w);
-  max-width: 28vw;
+  max-width: 10vw;
   z-index: 3;
   left: calc(-1 * var(--off-fish2));
   animation: fish2 18s linear infinite;
@@ -105,46 +139,37 @@
   }
 }
 
+/* Pufferfish */
 .fish3 {
   position: absolute;
-  bottom: 20.8vh;
+  bottom: 25vh;
   width: var(--fish-w);
-  max-width: 28vw;
+  max-width: 10vw;
   z-index: 3;
-  left: calc(-1 * var(--off-fish3));
+  right: calc(-1 * var(--off-fish3));
   animation: fish3 25s linear infinite;
 }
 
 @keyframes fish3 {
   0% {
-    transform: translateX(0);
+    transform: translateX(0) rotateY(180deg);
   }
   90%,
   100% {
-    transform: translateX(calc(100vw + var(--off-fish3)));
+    transform: translateX(calc(-100vw - var(--off-fish3))) rotateY(180deg);
   }
 }
 
+/* Shark */
 .fish4 {
   position: absolute;
   bottom: 60vh;
-  width: var(--fish-w);
-  max-width: 28vw;
+  width: calc(var(--fish-w) * 2);
+  max-width: 30vw;
   z-index: 3;
-  right: calc(-1 * var(--off-fish2));
-  /* left: calc(-1 * var(--off-fish4)); */
+  right: calc(-1 * var(--off-fish4));
   animation: fish4 10s linear infinite;
 }
-
-/* @keyframes fish4 {
-  0% {
-    transform: translateX(0);
-  }
-  90%,
-  100% {
-    transform: translateX(calc(100vw + var(--off-fish4)));
-  }
-} */
 
 @keyframes fish4 {
   0% {
@@ -156,11 +181,12 @@
   }
 }
 
+/* Stingray */
 .fish5 {
   position: absolute;
-  bottom: 40.8vh;
-  width: var(--fish-w);
-  max-width: 28vw;
+  bottom: 40vh;
+  width: calc(var(--fish-w) * 2);
+  max-width: 30vw;
   z-index: 3;
   left: calc(-1 * var(--off-fish5));
   animation: fish5 20s linear infinite;
@@ -176,11 +202,12 @@
   }
 }
 
+/* Turtle */
 .fish6 {
   position: absolute;
-  bottom: 70.8vh;
+  bottom: 70vh;
   width: var(--fish-w);
-  max-width: 28vw;
+  max-width: max-content;
   z-index: 3;
   left: calc(-1 * var(--off-fish6));
   animation: fish6 18s linear infinite;
