@@ -58,7 +58,7 @@
   Font for the heading
 --------------------------------------------------------- */
 .overlay-text h1 {
-  font-family: 'Irish Grover', cursive;
+  font-family: "Irish Grover", cursive;
   font-size: 2.7rem;
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
@@ -100,7 +100,7 @@
 /* Crab */
 .fish1 {
   position: absolute;
-  bottom: 7vh;
+  bottom: 9vh;
   width: var(--fish-w);
   max-width: 10vw;
   z-index: 1;
