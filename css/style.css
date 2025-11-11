@@ -12,7 +12,7 @@
   --off-fish2: 200px;
   --off-fish3: 200px;
   --off-fish4: 400px;
-  --off-fish5: 200px;
+  --off-fish5: 400px;
   --off-fish6: 200px;
 }
 
@@ -100,7 +100,7 @@
 /* Crab */
 .fish1 {
   position: absolute;
-  bottom: 0vh;
+  bottom: 7vh;
   width: var(--fish-w);
   max-width: 10vw;
   z-index: 1;
@@ -121,7 +121,7 @@
 /* Nemo */
 .fish2 {
   position: absolute;
-  bottom: 15vh;
+  bottom: 20vh;
   width: var(--fish-w);
   max-width: 10vw;
   z-index: 3;
@@ -142,7 +142,7 @@
 /* Pufferfish */
 .fish3 {
   position: absolute;
-  bottom: 25vh;
+  bottom: 30vh;
   width: var(--fish-w);
   max-width: 10vw;
   z-index: 3;
