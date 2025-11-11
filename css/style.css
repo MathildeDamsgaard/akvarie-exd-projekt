@@ -11,7 +11,7 @@
   --off-fish1: 200px;
   --off-fish2: 200px;
   --off-fish3: 200px;
-  --off-fish4: 200px;
+  --off-fish4: 400px;
   --off-fish5: 200px;
   --off-fish6: 200px;
 }
@@ -51,14 +51,14 @@
   text-align: center;
   color: white;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-   z-index: 10;
+  z-index: 10;
 }
 
 /* ---------------------------------------------------------
   Font for the heading
 --------------------------------------------------------- */
 .overlay-text h1 {
-  font-family: 'Irish Grover', cursive;
+  font-family: "Irish Grover", cursive;
   font-size: 3rem;
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
@@ -68,7 +68,7 @@
   Font for p
 --------------------------------------------------------- */
 .overlay-text p {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-style: italic;
   font-size: 1.4rem;
   opacity: 0.9;
