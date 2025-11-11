@@ -189,7 +189,7 @@
   max-width: 30vw;
   z-index: 3;
   left: calc(-1 * var(--off-fish5));
-  animation: fish5 20s linear infinite;
+  animation: fish5 18s linear infinite;
 }
 
 @keyframes fish5 {
@@ -205,12 +205,12 @@
 /* Turtle */
 .fish6 {
   position: absolute;
-  bottom: 70vh;
+  bottom: 78vh;
   width: var(--fish-w);
   max-width: max-content;
   z-index: 3;
   left: calc(-1 * var(--off-fish6));
-  animation: fish6 18s linear infinite;
+  animation: fish6 25s linear infinite;
 }
 
 @keyframes fish6 {
