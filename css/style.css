@@ -10,10 +10,10 @@
   /* Start /exit offset (px) */
   --off-fish1: 200px;
   --off-fish2: 200px;
-  --off-fish3: -100px;
-  --off-fish4: -500px;
-  --off-fish5: -400px;
-  --off-fish6: 70px;
+  --off-fish3: 200px;
+  --off-fish4: 200px;
+  --off-fish5: 200px;
+  --off-fish6: 200px;
 }
 
 /* ---------------------------------------------------------
@@ -162,8 +162,8 @@
 .fish4 {
   position: absolute;
   bottom: 60vh;
-  width: var(--fish-w);
-  max-width: max-content;
+  width: calc(var(--fish-w) * 2);
+  max-width: 30vw;
   z-index: 3;
   right: calc(-1 * var(--off-fish4));
   animation: fish4 10s linear infinite;
@@ -183,8 +183,8 @@
 .fish5 {
   position: absolute;
   bottom: 40vh;
-  width: var(--fish-w);
-  max-width: max-content;
+  width: calc(var(--fish-w) * 2);
+  max-width: 30vw;
   z-index: 3;
   left: calc(-1 * var(--off-fish5));
   animation: fish5 20s linear infinite;
