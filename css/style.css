@@ -67,12 +67,13 @@
    - vw/vh til placering og ALLE animationsafstande
 --------------------------------------------------------- */
 
+/* Crab */
 .fish1 {
   position: absolute;
-  bottom: -0.5vh;
+  bottom: 0vh;
   width: var(--fish-w);
-  max-width: 28vw;
-  z-index: 3;
+  max-width: 10vw;
+  z-index: 1;
   left: calc(-1 * var(--off-fish1));
   animation: fish1 12s linear infinite;
 }
@@ -87,11 +88,12 @@
   }
 }
 
+/* Nemo */
 .fish2 {
   position: absolute;
-  bottom: 10.8vh;
+  bottom: 15vh;
   width: var(--fish-w);
-  max-width: 28vw;
+  max-width: 10vw;
   z-index: 3;
   left: calc(-1 * var(--off-fish2));
   animation: fish2 18s linear infinite;
@@ -107,46 +109,37 @@
   }
 }
 
+/* Pufferfish */
 .fish3 {
   position: absolute;
-  bottom: 20.8vh;
+  bottom: 25vh;
   width: var(--fish-w);
-  max-width: 28vw;
+  max-width: max-content;
   z-index: 3;
-  left: calc(-1 * var(--off-fish3));
+  right: calc(-1 * var(--off-fish3));
   animation: fish3 25s linear infinite;
 }
 
 @keyframes fish3 {
   0% {
-    transform: translateX(0);
+    transform: translateX(0) rotateY(180deg);
   }
   90%,
   100% {
-    transform: translateX(calc(100vw + var(--off-fish3)));
+    transform: translateX(calc(-100vw - var(--off-fish3))) rotateY(180deg);
   }
 }
 
+/* Shark */
 .fish4 {
   position: absolute;
   bottom: 60vh;
   width: var(--fish-w);
-  max-width: 28vw;
+  max-width: max-content;
   z-index: 3;
-  right: calc(-1 * var(--off-fish2));
-  /* left: calc(-1 * var(--off-fish4)); */
+  right: calc(-1 * var(--off-fish4));
   animation: fish4 10s linear infinite;
 }
-
-/* @keyframes fish4 {
-  0% {
-    transform: translateX(0);
-  }
-  90%,
-  100% {
-    transform: translateX(calc(100vw + var(--off-fish4)));
-  }
-} */
 
 @keyframes fish4 {
   0% {
@@ -158,11 +151,12 @@
   }
 }
 
+/* Stingray */
 .fish5 {
   position: absolute;
-  bottom: 40.8vh;
+  bottom: 40vh;
   width: var(--fish-w);
-  max-width: 28vw;
+  max-width: max-content;
   z-index: 3;
   left: calc(-1 * var(--off-fish5));
   animation: fish5 20s linear infinite;
@@ -178,11 +172,12 @@
   }
 }
 
+/* Turtle */
 .fish6 {
   position: absolute;
   bottom: 70.8vh;
   width: var(--fish-w);
-  max-width: 28vw;
+  max-width: max-content;
   z-index: 3;
   left: calc(-1 * var(--off-fish6));
   animation: fish6 18s linear infinite;
