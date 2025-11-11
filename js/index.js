@@ -61,5 +61,46 @@ fishInfo.forEach((fish) => {
     });
 });
 
+// DOM Elementer
+const getCrab = document.getElementById("crab");
+const getNemoFish = document.getElementById("nemofish");
+const getPufferFish = document.getElementById("pufferfish");
+const getShark = document.getElementById("shark");
+const getStingRay = document.getElementById("stringray");
+const getTurtle = document.getElementById("turtle");
 
+if (getCrab) {
+    getCrab.addEventListener("click", () => {
 
+    });
+}
+
+if (getNemoFish) {
+    getNemoFish.addEventListener("click", () => {
+
+    });
+}
+
+if (getPufferFish) {
+    getPufferFish.addEventListener("click", () => {
+
+    });
+}
+
+if (getShark) {
+    getShark.addEventListener("click", () => {
+
+    });
+}
+
+if (getStingRay) {
+    getStingRay.addEventListener("click", () => {
+
+    });
+}
+
+if (getTurtle) {
+    getTurtle.addEventListener("click", () => {
+
+    });
+}
