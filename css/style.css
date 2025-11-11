@@ -11,8 +11,8 @@
   --off-fish1: 200px;
   --off-fish2: 200px;
   --off-fish3: 200px;
-  --off-fish4: 200px;
-  --off-fish5: 200px;
+  --off-fish4: 400px;
+  --off-fish5: 400px;
   --off-fish6: 200px;
 }
 
@@ -99,7 +99,7 @@
 /* Crab */
 .fish1 {
   position: absolute;
-  bottom: 0vh;
+  bottom: 10vh;
   width: var(--fish-w);
   max-width: 10vw;
   z-index: 1;
@@ -120,7 +120,7 @@
 /* Nemo */
 .fish2 {
   position: absolute;
-  bottom: 15vh;
+  bottom: 20vh;
   width: var(--fish-w);
   max-width: 10vw;
   z-index: 3;
@@ -141,7 +141,7 @@
 /* Pufferfish */
 .fish3 {
   position: absolute;
-  bottom: 25vh;
+  bottom: 35vh;
   width: var(--fish-w);
   max-width: 10vw;
   z-index: 3;
@@ -183,12 +183,12 @@
 /* Stingray */
 .fish5 {
   position: absolute;
-  bottom: 40vh;
+  bottom: 50vh;
   width: calc(var(--fish-w) * 2);
   max-width: 30vw;
   z-index: 3;
   left: calc(-1 * var(--off-fish5));
-  animation: fish5 20s linear infinite;
+  animation: fish5 18s linear infinite;
 }
 
 @keyframes fish5 {
@@ -204,12 +204,12 @@
 /* Turtle */
 .fish6 {
   position: absolute;
-  bottom: 70vh;
+  bottom: 75vh;
   width: var(--fish-w);
   max-width: max-content;
   z-index: 3;
   left: calc(-1 * var(--off-fish6));
-  animation: fish6 18s linear infinite;
+  animation: fish6 25s linear infinite;
 }
 
 @keyframes fish6 {
