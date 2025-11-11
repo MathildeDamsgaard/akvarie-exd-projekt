@@ -85,7 +85,6 @@
   height: 870px;
   margin: 0;
   background: url(../img/Baggrund.png);
-  background-size: 100vw auto;
   background-repeat: repeat-x; /* Den studerende undersøger egenskaber - background-repeat */
   animation: animateBg 17s linear infinite;
   z-index: 1;
