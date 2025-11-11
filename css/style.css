@@ -17,10 +17,10 @@
   /* Start /exit offset (px) */
   --off-fish1: 200px;
   --off-fish2: 200px;
-  --off-fish3: 200px;
-  --off-fish4: 200px;
-  --off-fish5: 200px;
-  --off-fish6: 200px;
+  --off-fish3: -100px;
+  --off-fish4: -500px;
+  --off-fish5: -400px;
+  --off-fish6: 70px;
 }
 
 /* ---------------------------------------------------------
@@ -114,7 +114,7 @@
   position: absolute;
   bottom: 25vh;
   width: var(--fish-w);
-  max-width: max-content;
+  max-width: 10vw;
   z-index: 3;
   right: calc(-1 * var(--off-fish3));
   animation: fish3 25s linear infinite;
@@ -175,7 +175,7 @@
 /* Turtle */
 .fish6 {
   position: absolute;
-  bottom: 70.8vh;
+  bottom: 70vh;
   width: var(--fish-w);
   max-width: max-content;
   z-index: 3;
