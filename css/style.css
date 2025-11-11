@@ -40,7 +40,11 @@
   position: relative;
   height: 100vh;
   overflow: hidden; /* Overflow undersøger den studerende */
-  background: linear-gradient(var(--color-water2), var(--color-water1));
+  background: linear-gradient(
+    to bottom right,
+    var(--color-water2),
+    var(--color-water1)
+  );
 }
 
 /* ---------------------------------------------------------
