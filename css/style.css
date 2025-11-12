@@ -227,7 +227,6 @@
     transform: translateX(calc(100vw + var(--off-fish6)));
   }
 }
-
 .tooltip {
   position: fixed;
   top: 50%;
