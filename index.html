@@ -7,9 +7,7 @@
     <!-- indsæt link her til eksternt stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Lato:ital@1&display=swap"
-      rel="stylesheet"
-    />
+      href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Lato:ital@1&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- opbyg HTML struktur her -->
@@ -38,11 +36,16 @@
         <p>Klik på en fisk, læs og spil</p>
       </div>
     </section>
-    <div id="tooltip" class="tooltip">
-      
-        <p>Spil med en fisk?</p>
     </div>
-    <a href="game.html"></a><button>Tryk for at spille</button></a>
+    <!-- popup til fisk info -->
+   <div id="fish-popup" class="popup"> <!--baggrunds-overlay-->
+    <div class="popupContent"> <!--selve popup boksen-->
+    <div class="popupBody"></div> <!--her indsættes tekst via JS-->
+    <a href="game.html">
+    <button class="spilleknap">SPIL MED MIG!</button></a>
+    </div>
+    </div>
+
     <!-- indsæt link her til eksternt javascript -->
     <script src="js/index.js"></script>
   </body>
