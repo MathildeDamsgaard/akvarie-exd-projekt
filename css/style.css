@@ -221,3 +221,32 @@
     transform: translateX(calc(100vw + var(--off-fish6)));
   }
 }
+
+
+.tooltip {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #334F7D;
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 25px;
+  font-size: 15px;
+  line-height: 1.4;
+  max-width: min(320px, 90vw);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.tooltip.is-visible {
+   opacity: 1;
+   transform: translate(-50%, -50%) scale(1);
+}
+
+.tooltip {
+   transform: translate(-50%, -55%) scale(0.95);
+}
