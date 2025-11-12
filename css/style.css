@@ -258,7 +258,6 @@
   pointer-events: all;
 }
 
-
 .tooltip-container {
   position: relative;
   display: inline-block;
@@ -268,7 +267,7 @@
 .tooltip-content {
   display: none;
   position: absolute;
-  background-color: #E01B24;
+  background-color: #e01b24;
   color: #fff;
   padding: 10px;
   border-radius: 5px;
@@ -283,7 +282,6 @@
 .tooltip-container:hover .tooltip-content {
   display: block;
 }
-
 
 .tooltip-content strong {
   font-size: 1.4em;
@@ -314,3 +312,9 @@
   background-color: #c8191f;
 }
 
+.tooltip strong {
+  font-size: 1.6rem; /* juster efter behov */
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+}
