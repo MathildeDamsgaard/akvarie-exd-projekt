@@ -36,30 +36,35 @@ const fishInfo = [
 
 
 // Info kort om fiskene
-const tooltip = document.getElementById("tooltip");
-
-function showTooltip(html) {
-    if (tooltip) {
-        tooltip.innerHTML;
-        tooltip.classList.add("is-visible");
-        setTimeout( function () {
-            tooltip.classList.remove("is-visible");
-        },8000);
+document.addEventListener("DOMContentLoaded", () =>{
+    // Finder tooltip id
+    const tooltip = document.getElementById("tooltip");
+    // Funktion der finder tooltip med oplysninger til fiskene
+    function showTooltip(html) {
+        if (tooltip) {
+            tooltip.innerHTML = html;
+            tooltip.classList.add("is.visible");
+            setTimeout(function() {
+                tooltip.classList.remove("is-visible");
+            },8000);
+        }
     }
-}
+    fishInfo.forEach((fish) => {
+        document.querySelectorAll("." + fish.className).forEach((elem) => {
+            elem.addEventListener("click", () => {
+                const fishDetails = `
+                <strong>${fish.fishName}</strong><br>
+                Year: ${fish.lifeSpan}
+                `;
+                showTooltip(fishDetails);
 
-
-fishInfo.forEach((fish) => {
-    document.querySelectorAll("." + fish.className).forEach((elem) => {
-        elemaddEventListener("click", () => {
-            const fishDetails = `
-            <strong>${fish.fishName}</strong><br>
-            Year: ${fish.lifeSpan}
-            `;
-            showTooltip(fishDetails);
+            });
         });
     });
 });
+
+
+
 
 // DOM Elementer
 const getCrab = document.getElementById("crab");
