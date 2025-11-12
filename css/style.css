@@ -233,8 +233,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 340px;
-  height: 340px;
+  width: 360px;
+  height: 360px;
   border-radius: 50%;
   background-color: #334f7d;
   color: #fff;
@@ -259,8 +259,7 @@
   transform: translate(-50%, -55%) scale(0.95);
 }
 
-.tooltip h2 {
-  font-size: 18px;
-  margin-bottom: 8px;
-}
+
+
+
 
