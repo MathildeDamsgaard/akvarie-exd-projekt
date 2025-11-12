@@ -7,6 +7,7 @@ const getPufferFish = document.getElementById("pufferfish");
 const getShark = document.getElementById("shark");
 const getStingRay = document.getElementById("stingray");
 const getTurtle = document.getElementById("turtle");
+const getSeaweed = document.getElementById("seaweed");
 
 // Opretter et lyd-objekt og tildeler source til den specifikke lydfil i mappen "sound"
 const soundCrab = new Audio();
@@ -63,6 +64,12 @@ if (getTurtle) {
   });
 }
 
+if (getSeaweed) {
+  getSeaweed.addEventListener("click", () => {
+    soundSeaweed.play();
+  });
+}
+
 //Dataobjekt med information om hver fisk
 const fishInfo = {
   crab: {
@@ -89,6 +96,10 @@ const fishInfo = {
     title: "SKILPADDE",
     text: "Hej! Jeg er en skilpadde. Jeg er et roligt og venligt dyr, som for det meste lever i de varme have. Jeg har ikke specielt travlt i livet - jeg er nemlig ikke hurtig. Men hvis jeg endelig skal skynde mig, kan jeg faktisk svømme hurtigt. Jeg svømmer en hel del og bevæger mig mange kilometer med mine finner.",
   },
+  seaweed: {
+    title: "TANG",
+    text: "“Hej! Jeg er tang. Jeg vokser i vandet og mange fisk bor ved mig. Jeg kan vokse hurtigt og jeg kan både være grøn, brun og rød. Mennesker kan spise mig! Måske har du smagt mig i sushi?”",
+  },
 };
 
 // Funktion: vis popup med HTML-indhold
@@ -101,7 +112,15 @@ function showFishPopup(html) {
 
 // Binder click-handlere til alle fisk ved at bruge deres id'er
 // Når der klikkes, hentes teksten fra fishInfo og sendes til showFishPopup
-["crab", "nemo", "pufferfish", "shark", "stingray", "turtle"].forEach((id) => {
+[
+  "crab",
+  "nemo",
+  "pufferfish",
+  "shark",
+  "stingray",
+  "turtle",
+  "seaweed",
+].forEach((id) => {
   const el = document.getElementById(id);
   if (!el) return;
   el.addEventListener("click", () => {
