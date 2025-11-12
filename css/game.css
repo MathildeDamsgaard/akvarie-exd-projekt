@@ -12,32 +12,28 @@
   height: 80px;
   width: 160px;
   position: absolute;
-  left: 0; /* helt i venstre side */
-  bottom: 50%; /* midtstillet lodret vha. bottom */
-  transform: translateY(
-    50%
-  ); /* flyt elementet ned med 50% af egen højde => centreret */
 }
 
 #game {
-  background: linear-gradient(
-    to bottom right,
-    var(--color-water2),
-    var(--color-water1)
-  );
+  /* lag: først billede (øverst), så gradient (bagved) */
+  background-image: url("../img/gamebg.png"),
+    linear-gradient(to bottom right, var(--color-water2), var(--color-water1));
+  background-position: center center, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 120vw auto;
   width: 100%;
-  min-height: 100vh; /* sikrer fuld højde */
+  min-height: 100vh;
   margin: 0;
-  overflow-x: hidden; /* forhindrer hvide sider hvis noget går lidt udenfor */
+  overflow-x: hidden;
   position: relative;
-  text-align: center;
 }
 
-/* fjern hvide kanter */
+/* fjerner hvide kanter */
 html,
 body {
   height: 100%;
   margin: 0;
+  padding: 0;
 }
 
 #start {
