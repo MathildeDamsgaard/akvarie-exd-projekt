@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     function showTooltip(html) {
         if (tooltip) {
             tooltip.innerHTML = html;
-            tooltip.classList.add("is.visible");
+            tooltip.classList.add("is-visible");
             setTimeout(function() {
                 tooltip.classList.remove("is-visible");
             },8000);
