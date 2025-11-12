@@ -96,7 +96,7 @@
    - vw/vh til placering og ALLE animationsafstande
 --------------------------------------------------------- */
 
-/* Crab */
+/* Crab: Mathilde */
 .fish1 {
   position: absolute;
   bottom: 10vh;
@@ -118,7 +118,7 @@
   }
 }
 
-/* Nemo */
+/* Nemo: Yulia */
 .fish2 {
   position: absolute;
   bottom: 20vh;
@@ -140,7 +140,7 @@
   }
 }
 
-/* Pufferfish */
+/* Pufferfish: Mikkeline*/
 .fish3 {
   position: absolute;
   bottom: 35vh;
@@ -162,7 +162,7 @@
   }
 }
 
-/* Shark */
+/* Shark: Cecilie */
 .fish4 {
   position: absolute;
   bottom: 60vh;
@@ -184,7 +184,7 @@
   }
 }
 
-/* Stingray */
+/* Stingray: Mathilde */
 .fish5 {
   position: absolute;
   bottom: 50vh;
@@ -206,7 +206,7 @@
   }
 }
 
-/* Turtle */
+/* Turtle; Cecilie */
 .fish6 {
   position: absolute;
   bottom: 75vh;
@@ -258,8 +258,3 @@
 .tooltip {
   transform: translate(-50%, -55%) scale(0.95);
 }
-
-
-
-
-
