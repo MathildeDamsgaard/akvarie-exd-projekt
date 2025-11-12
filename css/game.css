@@ -74,3 +74,13 @@ body {
   position: absolute;
   width: 9px;
 }
+
+#homeBTN {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 85px;
+  height: 85px;
+  background-size: cover;
+  cursor: pointer;
+}
