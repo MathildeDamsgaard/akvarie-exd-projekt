@@ -122,10 +122,9 @@ function hideFishPopup() {
 const closeBtn = document.querySelector(".closeBtn");
 if (closeBtn) closeBtn.addEventListener("click", hideFishPopup);
 
-
 // Binder click-handlere til alle fisk ved at bruge deres id'er
 // Når der klikkes, hentes teksten fra fishInfo og sendes til showFishPopup
-  [
+[
   "crab",
   "nemo",
   "pufferfish",
