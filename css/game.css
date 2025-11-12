@@ -15,19 +15,20 @@
 }
 
 #game {
-  /* to lag: først billede (øverst), så gradient (bagved) */
-  background: url("../img/gamebg.png"), center/auto no-repeat,
+  /* lag: først billede (øverst), så gradient (bagved) */
+  background-image: url("../img/gamebg.png"),
     linear-gradient(to bottom right, var(--color-water2), var(--color-water1));
-  background-size: cover, cover;
-  background-position: center;
+  background-position: center center, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 120vw auto;
   width: 100%;
-  min-height: 100vh; /* sikrer fuld højde */
+  min-height: 100vh;
   margin: 0;
-  overflow-x: hidden; /* forhindrer hvide sider hvis noget går lidt udenfor */
+  overflow-x: hidden;
   position: relative;
 }
 
-/* fjern hvide kanter */
+/* fjerner hvide kanter */
 html,
 body {
   height: 100%;
