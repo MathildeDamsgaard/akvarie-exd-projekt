@@ -14,6 +14,7 @@
   --off-fish4: 400px;
   --off-fish5: 400px;
   --off-fish6: 200px;
+  --off-fish7: 200px;
 }
 
 /* ---------------------------------------------------------
@@ -87,7 +88,7 @@
   background: url(../img/bg.png);
   background-size: 120vw auto;
   background-position: center bottom;
-  z-index: 1;
+  z-index: 0;
 }
 /* inset: auto 0 0 0; /* inset egenskaben undersøger den studerende  */
 /* ---------------------------------------------------------
@@ -102,7 +103,7 @@
   bottom: 10vh;
   width: var(--fish-w);
   max-width: 10vw;
-  z-index: 1;
+  z-index: 4;
   left: calc(-1 * var(--off-fish1));
   animation: fish1 12s linear infinite;
   cursor: pointer;
@@ -146,7 +147,7 @@
   bottom: 35vh;
   width: var(--fish-w);
   max-width: 10vw;
-  z-index: 3;
+  z-index: 1;
   right: calc(-1 * var(--off-fish3));
   animation: fish3 25s linear infinite;
   cursor: pointer;
@@ -219,6 +220,28 @@
 }
 
 @keyframes fish6 {
+  0% {
+    transform: translateX(0);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(100vw + var(--off-fish6)));
+  }
+}
+
+/* Seaweed: Mathilde */
+.fish7 {
+  position: absolute;
+  bottom: 10vh;
+  width: calc(var(--fish-w) * 1.5);
+  max-width: max-content;
+  z-index: 2;
+  left: 48vw; /* fast position indenfor #game */
+  animation: none; /* fjernet animation — står stille */
+  cursor: pointer;
+}
+
+@keyframes fish7 {
   0% {
     transform: translateX(0);
   }
