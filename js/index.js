@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () =>{
         document.querySelectorAll("." + fish.className).forEach((elem) => {
             elem.addEventListener("click", () => {
                 const fishDetails = `
-                <strong>${fish.fishName}</strong><br>
+                <strong>${fish.fishName}</strong>
                 Info: ${fish.info}
                 `;
                 showTooltip(fishDetails);
