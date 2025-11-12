@@ -258,6 +258,33 @@
   pointer-events: all;
 }
 
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip-content {
+  display: none;
+  position: absolute;
+  background-color: #E01B24;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: auto;
+  white-space: nowrap;
+}
+
+.tooltip-container:hover .tooltip-content {
+  display: block;
+}
+
+
 .tooltip-content strong {
   font-size: 1.4em;
   margin-bottom: 10px;
@@ -286,3 +313,4 @@
 .tooltip-content button:hover {
   background-color: #c8191f;
 }
+
