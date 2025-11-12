@@ -64,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () =>{
     })
 })
 
-
 // DOM Elementer
 const getCrab = document.getElementById("crab");
 const getNemoFish = document.getElementById("nemo");
@@ -72,47 +71,6 @@ const getPufferFish = document.getElementById("pufferfish");
 const getShark = document.getElementById("shark");
 const getStingRay = document.getElementById("stingray");
 const getTurtle = document.getElementById("turtle");
-
-if (getCrab) {
-    getCrab.addEventListener("click", () => {
-       
-    });
-}
-
-
-if (getNemoFish) {
-    getNemoFish.addEventListener("click", () => {
-        
-    });
-}
-
-
-if (getPufferFish) {
-    getPufferFish.addEventListener("click", () => {
-        
-    });
-}
-
-
-if (getShark) {
-    getShark.addEventListener("click", () => {
-        
-    });
-}
-
-
-if (getStingray) {
-    getStingray.addEventListener("click", () => {
-          
-    });
-}
-
-
-if (getTurtle) {
-    getTurtle.addEventListener("click", () => {
-        
-    });
-}
 
 
 // Opretter et lyd-objekt og tildeler source til den specifikke lydfil i mappen "sound"

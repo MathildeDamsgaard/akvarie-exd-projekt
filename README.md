@@ -8,7 +8,7 @@ Mathilde har haft ansvaret for at få fiskene til at bevæge sig rundt i akvarie
 
 # Mikkeline
 
-Mikkeline har haft ansvaret for baggrundsgradienten og lyd på fiskene.
+Mikkeline har haft ansvaret for baggrundsgradienten og lyd på fiskene. Hun har også lavet home knappen i vores "game".
 
 # Yulia
 
