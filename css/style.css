@@ -1,5 +1,7 @@
 :root {
   --font-body: "Irish Grover", system-ui;
+  --font-body2: "Lato", sans-serif;
+
   /* Farver */
   --color-water1: #1d5a77;
   --color-water2: #44b9f1;
@@ -70,7 +72,6 @@
 --------------------------------------------------------- */
 .overlay-text p {
   font-family: "Lato", sans-serif;
-  font-style: italic;
   font-size: 1.4rem;
   opacity: 0.9;
 }
@@ -264,8 +265,17 @@
   padding: 1.25rem;
 }
 
+/* Gør pop-up teksten Lato */
+.popup,
+.popupContent,
+.popupBody,
+.popup * {
+  font-family: var(--font-body2);
+}
+
 /* Tilten på fisk gøres større */
 .popupBody strong {
+  font-family: var(--font-body);
   display: block;
   font-size: 1.8rem;
   font-weight: 800;
@@ -274,6 +284,7 @@
   color: #000;
   text-transform: uppercase;
 }
+
 .popup.is-visible {
   display: flex;
 }
