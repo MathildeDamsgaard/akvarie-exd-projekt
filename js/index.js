@@ -110,9 +110,22 @@ function showFishPopup(html) {
   popup.classList.add("is-visible");
 }
 
+// Funktion: skjul popup
+function hideFishPopup() {
+  const popup = document.getElementById("fish-popup");
+  if (!popup) return;
+  popup.classList.remove("is-visible");
+  popup.setAttribute("aria-hidden", "true");
+}
+
+// Luk-knap
+const closeBtn = document.querySelector(".closeBtn");
+if (closeBtn) closeBtn.addEventListener("click", hideFishPopup);
+
+
 // Binder click-handlere til alle fisk ved at bruge deres id'er
 // Når der klikkes, hentes teksten fra fishInfo og sendes til showFishPopup
-[
+  [
   "crab",
   "nemo",
   "pufferfish",
