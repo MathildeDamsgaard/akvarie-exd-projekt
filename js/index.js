@@ -1,4 +1,5 @@
 "use strict";
+
 // Opbygger vores datastruktur med et Array som indeholder JS objekter
 const fishInfo = [
     {
@@ -34,7 +35,6 @@ const fishInfo = [
 ];
 
 
-
 // Info kort om fiskene
 document.addEventListener("DOMContentLoaded", () =>{
     // Finder tooltip id
@@ -62,9 +62,6 @@ document.addEventListener("DOMContentLoaded", () =>{
         });
     });
 });
-
-
-
 
 // DOM Elementer
 const getCrab = document.getElementById("crab");
