@@ -12,7 +12,7 @@ Mikkeline har haft ansvaret for baggrundsgradienten og lyd på fiskene.
 
 # Yulia
 
-Yulia har haft ansvaret for
+Yulia har haft ansvaret for overskriften og 'cursor pointer' property i CSS
 
 # Cecilie
 

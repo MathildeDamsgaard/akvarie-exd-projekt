@@ -1,4 +1,5 @@
 "use strict";
+
 // Opbygger vores datastruktur med et Array som indeholder JS objekter
 const fishInfo = [
     {
@@ -64,8 +65,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 })
 
 
-
-// Henter DOM Elementer 
+// DOM Elementer
 const getCrab = document.getElementById("crab");
 const getNemoFish = document.getElementById("nemo");
 const getPufferFish = document.getElementById("pufferfish");
