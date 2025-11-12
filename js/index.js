@@ -35,7 +35,6 @@ const fishInfo = [
 
 
 
-
 // Info kort om fiskene
 document.addEventListener("DOMContentLoaded", () =>{
     // Finder tooltip id
@@ -69,10 +68,10 @@ document.addEventListener("DOMContentLoaded", () =>{
 
 // DOM Elementer
 const getCrab = document.getElementById("crab");
-const getNemoFish = document.getElementById("nemofish");
+const getNemoFish = document.getElementById("nemo");
 const getPufferFish = document.getElementById("pufferfish");
 const getShark = document.getElementById("shark");
-const getStingRay = document.getElementById("stringray");
+const getStingRay = document.getElementById("stingray");
 const getTurtle = document.getElementById("turtle");
 
 if (getCrab) {
@@ -111,4 +110,57 @@ if (getTurtle) {
     });
 }
 
+// Opretter et lyd-objekt og tildeler source til den specifikke lydfil i mappen "sound"
+const soundCrab = new Audio();
+soundCrab.src = "../sound/krabbe.mp3";
 
+const soundNemo = new Audio();
+soundNemo.src = "../sound/nemo.mp3";
+
+const soundPuffer = new Audio();
+soundPuffer.src = "../sound/pufferfisk.mp3";
+
+const soundShark = new Audio();
+soundShark.src = "../sound/hvidhaj.mp3";
+
+const soundStingray = new Audio();
+soundStingray.src = "../sound/rokke.mp3";
+
+const soundTurtle = new Audio();
+soundTurtle.src = "../sound/skilpadde.mp3";
+
+if (getCrab) {
+  getCrab.addEventListener("click", () => {
+    soundCrab.play();
+  });
+}
+
+if (getNemoFish) {
+  getNemoFish.addEventListener("click", () => {
+    soundNemo.play();
+  });
+}
+
+if (getPufferFish) {
+  getPufferFish.addEventListener("click", () => {
+    soundPuffer.play();
+  });
+}
+
+if (getShark) {
+  getShark.addEventListener("click", () => {
+    soundShark.play();
+  });
+}
+
+if (getStingRay) {
+  getStingRay.addEventListener("click", () => {
+    soundStingray.play();
+  });
+}
+
+if (getTurtle) {
+  getTurtle.addEventListener("click", () => {
+    soundTurtle.play();
+  });
+}  
