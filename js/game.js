@@ -96,6 +96,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 */
 
+/*
+
 "use strict";
 const dodger = document.getElementById("dodger");
 
@@ -166,6 +168,216 @@ function moveDodgerDown() {
     : window.innerHeight - dodger.offsetHeight;
   if (top < max) dodger.style.top = `${top + 20}px`;
   else playGameOverSound();
+}
+
+const movementSound = document.getElementById("movementSound");
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "ArrowLeft") {
+    movementSound.play();
+    dodger.style.transform = "scaleX(-1)";
+  }
+  if (e.key === "ArrowRight") {
+    movementSound.play();
+    dodger.style.transform = "rotate(0deg)";
+  }
+  if (e.key === "ArrowUp") {
+    movementSound.play();
+    dodger.style.transform = "rotate(270deg)";
+  }
+  if (e.key === "ArrowDown") {
+    movementSound.play();
+    dodger.style.transform = "rotate(90deg)";
+  }
+});
+
+function playSoundOnMovement() {
+  movementSound.currentTime = 0;
+}
+
+// Game over sound
+const gameoverSound = document.getElementById("gameoverSound");
+
+function playGameOverSound() {
+  gameoverSound.play();
+}
+
+*/
+
+/*
+
+// ...existing code...
+"use strict";
+
+document.addEventListener("DOMContentLoaded", () => {
+  const dodger = document.getElementById("dodger");
+  const movementSound = document.getElementById("movementSound");
+  const gameoverSound = document.getElementById("gameoverSound");
+  if (!dodger) return;
+
+  function getPx(prop) {
+    const inline = dodger.style[prop];
+    const value =
+      inline && inline.includes("px")
+        ? inline
+        : window.getComputedStyle(dodger)[prop] || "0px";
+    return parseInt(value.replace("px", ""), 10) || 0;
+  }
+
+  function playMovementSound() {
+    if (!movementSound) return;
+    try {
+      movementSound.currentTime = 0;
+      movementSound.play().catch(() => {});
+    } catch {}
+  }
+
+  function playGameOverSound() {
+    if (!gameoverSound) return;
+    try {
+      gameoverSound.currentTime = 0;
+      gameoverSound.play().catch(() => {});
+    } catch {}
+  }
+
+  // sørg for inline startværdier så parseInt altid har noget at læse
+  if (!dodger.style.left) dodger.style.left = `${getPx("left")}px`;
+  if (!dodger.style.top) dodger.style.top = `${getPx("top")}px`;
+
+  function moveDodgerLeft() {
+    const left = getPx("left");
+    if (left > 0) dodger.style.left = `${left - 20}px`;
+    else playGameOverSound();
+  }
+
+  function moveDodgerRight() {
+    const left = getPx("left");
+    const parent = dodger.parentElement;
+    const max = parent
+      ? parent.clientWidth - dodger.offsetWidth
+      : window.innerWidth - dodger.offsetWidth;
+    if (left < max) dodger.style.left = `${left + 20}px`;
+    else playGameOverSound();
+  }
+
+  function moveDodgerUp() {
+    const top = getPx("top");
+    if (top > 0) dodger.style.top = `${top - 20}px`;
+    else playGameOverSound();
+  }
+
+  function moveDodgerDown() {
+    const top = getPx("top");
+    const parent = dodger.parentElement;
+    const max = parent
+      ? parent.clientHeight - dodger.offsetHeight
+      : window.innerHeight - dodger.offsetHeight;
+    if (top < max) dodger.style.top = `${top + 20}px`;
+    else playGameOverSound();
+  }
+
+  // Én samlet keydown-lytter (ingen duplikater)
+  document.addEventListener("keydown", (e) => {
+    switch (e.key) {
+      case "ArrowLeft":
+        playMovementSound();
+        dodger.style.transform = "scaleX(-1)";
+        moveDodgerLeft();
+        break;
+      case "ArrowRight":
+        playMovementSound();
+        dodger.style.transform = "scaleX(1)";
+        moveDodgerRight();
+        break;
+      case "ArrowUp":
+        playMovementSound();
+        dodger.style.transform = "rotate(270deg)";
+        moveDodgerUp();
+        break;
+      case "ArrowDown":
+        playMovementSound();
+        dodger.style.transform = "rotate(90deg)";
+        moveDodgerDown();
+        break;
+    }
+  });
+});
+// ...existing code...
+
+*/
+
+// Your code here
+
+"use strict";
+const dodger = document.getElementById("dodger");
+
+//Left dodger
+function moveDodgerLeft() {
+  const leftNumbers = dodger.style.left.replace("px", "");
+  const left = parseInt(leftNumbers, 10);
+
+  if (left > 0) {
+    dodger.style.left = `${left - 5}px`;
+  } else {
+    //Gameover
+    playGameOverSound();
+  }
+}
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "ArrowLeft") {
+    moveDodgerLeft();
+  }
+});
+
+//Right dodger
+function moveDodgerRight() {
+  const leftNumbers = dodger.style.left.replace("px", "");
+  const left = parseInt(leftNumbers, 10);
+
+  if (left < 360) {
+    dodger.style.left = `${left + 5}px`;
+  } else {
+    //Gameover
+    playGameOverSound();
+  }
+}
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "ArrowLeft") {
+    moveDodgerLeft();
+  }
+  if (e.key === "ArrowRight") {
+    moveDodgerRight();
+  }
+  if (e.key === "ArrowUp") {
+    moveDodgerUp();
+  }
+  if (e.key === "ArrowDown") {
+    moveDodgerDown();
+  }
+});
+
+function moveDodgerUp() {
+  const bottomNumbers = dodger.style.bottom.replace("px", "");
+  const bottom = parseInt(bottomNumbers);
+  if (bottom < 380) {
+    dodger.style.bottom = `${bottom + 5}px`;
+  } else {
+    //Gameover
+    playGameOverSound();
+  }
+}
+
+function moveDodgerDown() {
+  const bottomNumbers = dodger.style.bottom.replace("px", "");
+  const bottom = parseInt(bottomNumbers);
+  if (bottom > 0) {
+    dodger.style.bottom = `${bottom - 5}px`;
+  } else {
+    //Gameover
+    playGameOverSound();
+  }
 }
 
 const movementSound = document.getElementById("movementSound");
