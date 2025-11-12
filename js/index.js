@@ -4,6 +4,7 @@
 const fishInfo = [
   {
     className: "fish1",
+
     fishName: "KRABBE",
     Info: "Hej! Jeg er en krabbe. Jeg bor på stranden og i vandet, og jeg går sidelæns. Jeg har et hårdt skjold, som beskytter mig, og når jeg vokser, skifter jeg det gamle skjold ud med et nyt. Jeg spiser næsten alt - både planter, små dyr og nogle gange døde fisk. Selv om jeg ser lille ud, kan nogle af mine venner blive over en meter store.",
   },
