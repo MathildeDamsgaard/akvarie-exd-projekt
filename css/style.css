@@ -105,6 +105,7 @@
   z-index: 1;
   left: calc(-1 * var(--off-fish1));
   animation: fish1 12s linear infinite;
+  cursor: pointer;
 }
 
 @keyframes fish1 {
@@ -126,6 +127,7 @@
   z-index: 3;
   left: calc(-1 * var(--off-fish2));
   animation: fish2 18s linear infinite;
+  cursor: pointer;
 }
 
 @keyframes fish2 {
@@ -147,6 +149,7 @@
   z-index: 3;
   right: calc(-1 * var(--off-fish3));
   animation: fish3 25s linear infinite;
+  cursor: pointer;
 }
 
 @keyframes fish3 {
@@ -168,6 +171,7 @@
   z-index: 3;
   right: calc(-1 * var(--off-fish4));
   animation: fish4 10s linear infinite;
+  cursor: pointer;
 }
 
 @keyframes fish4 {
@@ -189,6 +193,7 @@
   z-index: 3;
   left: calc(-1 * var(--off-fish5));
   animation: fish5 18s linear infinite;
+  cursor: pointer;
 }
 
 @keyframes fish5 {
@@ -210,6 +215,7 @@
   z-index: 3;
   left: calc(-1 * var(--off-fish6));
   animation: fish6 25s linear infinite;
+  cursor: pointer;
 }
 
 @keyframes fish6 {
@@ -222,31 +228,39 @@
   }
 }
 
-
 .tooltip {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #334F7D;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background-color: #334f7d;
   color: #fff;
-  padding: 14px 18px;
-  border-radius: 25px;
-  font-size: 15px;
-  line-height: 1.4;
-  max-width: min(320px, 90vw);
+  font-size: 14px;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
   opacity: 0;
   transition: opacity 0.25s ease, transform 0.25s ease;
-  pointer-events: none;
   z-index: 1000;
 }
 
 .tooltip.is-visible {
-   opacity: 1;
-   transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .tooltip {
-   transform: translate(-50%, -55%) scale(0.95);
+  transform: translate(-50%, -55%) scale(0.95);
 }
+
+.tooltip h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+

@@ -4,40 +4,35 @@ const fishInfo = [
     {
         className: "fish1",
         fishName: "Crab",
-        lifeSpan: "3-12 year",
-        funFact: "Krabber går sidelæns! Når de vokser, smider de deres gamle skjold og får et nyt."
+        info: "Hej! Jeg er en krabbe. Jeg bor på stranden og i vandet, og jeg elsker at gå sidelæns. Jeg har et hårdt skjold, som beskytter mig, og når jeg vokser, skifter jeg det gamle skjold ud med et nyt. Mine store kløer bruger jeg til at fange mad, kæmpe med andre krabber og grave små huller i sandet. Jeg spiser næsten alt, både planter, små dyr og nogle gange døde fisk. Selv om jeg ser lille ud, kan nogle af mine venner blive over en meter store og leve i over 30 år!"
     },
     {
         className: "fish2",
         fishName: "Nemo",
-        lifeSpan: "6-10 year",
-        funFact: "Hvis moren forsvinder, bliver faren til en mor! Klovnefisk kan nemlig skifte køn."
+        info: "Hej! Jeg er en klovnefisk. Jeg er en lille, farverig fisk, der bor i det varme hav! Jeg har orange og hvide striber, næsten som en lille tiger i vandet! Jeg bor i et blødt hjem kaldet en søanemone. Den har tentakler, der kan stikke, men ikke mig! Jeg har et særligt slimlag, der beskytter mig, så jeg kan gemme mig der, helt trygt. Jeg elsker at svømme rundt og lege med mine venner. Vi bor tit mange sammen i den samme søanemone, som en lille familie! Og ved du hvad? Hvis den største klovnefisk-mor forsvinder, så bliver en af fædrene til en mor! Det er lidt fjollet, men sådan gør vi klovnefisk bare!"
     },
     {
         className: "fish3",
         fishName: "Pufferfish",
-        lifeSpan: "10 year",
-        funFact: "Pufferfisken kan puste sig op til tre gange sin egen størrelse - men den er også et af havets mest gitige dyr!"
+        info: "Hej, jeg er en pufferfisk, og jeg bliver bogstaveligt talt oppustet, når jeg bliver stresset! Jeg kan blive op til tre gange min normale størrelse uden at tage på i vægt! Jeg ligner en ballon, men du må ikke puste mig – jeg gør det selv. Jeg er super giftig. Seriøst. Ét lille måltid af mig, og du får en evig madforgiftning. Jeg ser sød ud, men jeg er faktisk et af havets mest dødelige dyr. Surprise!"
     },
     {
         className: "fish4",
         fishName: "Shark",
-        lifeSpan: "70-80 year",
-        funFact: "Hvidhajen kan svømme op til 40 km/t - men angriber sjældent mennesker med vilje, den forveksler os bare med sæler!"
+        info: "Hej, hvidhaj her! Jeg er en meget stor fisk, der lever i havet. Jeg er kendt for mine skarpe tænder, og jeg bliver kaldt hvidhajen, fordi jeg har en lys mave og grå ryg. Du finder mig i varme eller lidt kølige have over hele verden. Jeg er den hurtigste i havet – jeg kan svømme helt op til 40 km i timen for at fange mit bytte. Selvom jeg har skarpe tænder, så er jeg ikke særlig farlig – jeg tager bare nogle gange fejl af et menneske og en sæl."
     },
     {
         className: "fish5",
-        fishName: "Stinggray",
-        lifeSpan: "15-25 year",
-        funFact: "Rokker er flade som pandekager og gemmer sig under sandet - nogle kan blive op til 7 meter lange!"
-    },    
+        fishName: "Stingray",
+        info: "Hej! Jeg er en rokke. Jeg er næsten lige så flad som en pandekage, og jeg elsker at gemme mig under sandet. Jeg spiser muslinger, snegle og krabber. Mine øjne sidder ovenpå mit hoved, og min mund sidder nedenunder. Jeg har også en lang hale, som kan være giftig, og jeg bruger den til at forsvare mig selv. Jeg kan blive op til 7 meter lang!"
+    },
     {
         className: "fish6",
         fishName: "Turtle",
-        lifeSpan: "20-50 year",
-        funFact: "Havskildpadder kan svømme tusindvis af kilometer - men tager det helt roligt med en topfart på 30 km/t!"
+        info: "Hej! Skildpadde her. Jeg er et roligt og venligt dyr, som ikke har specielt travlt, og jeg lever for det meste i de varme have. Jeg svømmer mange kilometer i mit liv. Jeg er ikke hurtig, men hvis jeg har travlt, kan jeg svømme helt op til 30 km i timen!"
     }
 ];
+
 
 
 
@@ -60,8 +55,7 @@ document.addEventListener("DOMContentLoaded", () =>{
             elem.addEventListener("click", () => {
                 const fishDetails = `
                 <strong>${fish.fishName}</strong><br>
-                Year: ${fish.lifeSpan}
-                Fact: ${fish.funFact}
+                Info: ${fish.info}
                 `;
                 showTooltip(fishDetails);
 
