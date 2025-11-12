@@ -105,7 +105,7 @@
   z-index: 1;
   left: calc(-1 * var(--off-fish1));
   animation: fish1 12s linear infinite;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 @keyframes fish1 {
@@ -127,7 +127,7 @@
   z-index: 3;
   left: calc(-1 * var(--off-fish2));
   animation: fish2 18s linear infinite;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 @keyframes fish2 {
@@ -149,7 +149,7 @@
   z-index: 3;
   right: calc(-1 * var(--off-fish3));
   animation: fish3 25s linear infinite;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 @keyframes fish3 {
@@ -171,7 +171,7 @@
   z-index: 3;
   right: calc(-1 * var(--off-fish4));
   animation: fish4 10s linear infinite;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 @keyframes fish4 {
@@ -193,7 +193,7 @@
   z-index: 3;
   left: calc(-1 * var(--off-fish5));
   animation: fish5 18s linear infinite;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 @keyframes fish5 {
@@ -215,7 +215,7 @@
   z-index: 3;
   left: calc(-1 * var(--off-fish6));
   animation: fish6 25s linear infinite;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 @keyframes fish6 {
@@ -227,7 +227,6 @@
     transform: translateX(calc(100vw + var(--off-fish6)));
   }
 }
-
 
 .tooltip {
   position: fixed;
@@ -252,10 +251,10 @@
 }
 
 .tooltip.is-visible {
-   opacity: 1;
-   transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .tooltip {
-   transform: translate(-50%, -55%) scale(0.95);
+  transform: translate(-50%, -55%) scale(0.95);
 }
