@@ -1,69 +1,5 @@
 "use strict";
 
-// Opbygger vores datastruktur med et Array som indeholder JS objekter
-const fishInfo = [
-  {
-    className: "fish1",
-
-    fishName: "KRABBE",
-    Info: "Hej! Jeg er en krabbe. Jeg bor på stranden og i vandet, og jeg går sidelæns. Jeg har et hårdt skjold, som beskytter mig, og når jeg vokser, skifter jeg det gamle skjold ud med et nyt. Jeg spiser næsten alt - både planter, små dyr og nogle gange døde fisk. Selv om jeg ser lille ud, kan nogle af mine venner blive over en meter store.",
-  },
-  {
-    className: "fish2",
-    fishName: "KLOVNEFISK",
-    Info: "Hej! Jeg er en klovnefisk. Jeg er en lille, farverig fisk med orange og hvide striber - næsten som en lille tiger i vandet. Måske har du set mig i filmen Find Nemo? Jeg bor i en søanemone, som har små stikkende arme, men de kan ikke stikke mig, fordi jeg har et særligt slimlag. Jeg elsker at svømme og lege med mine venner!",
-  },
-  {
-    className: "fish3",
-    fishName: "PUFFERFISK",
-    Info: "Hej! Jeg er en pufferfisk og jeg bliver bogstaveligt talt oppustet, når jeg bliver stresset! Jeg kan blive op til tre gange min normale størrelse, så jeg ligner en ballon - men uden at tage på i vægt! Jeg er super giftig. Ét lille måltid af mig, og du får en evig madforgiftning. Selvom jeg ser sød ud, er jeg faktisk et af havets mest dødelige dyr. Surprise!",
-  },
-  {
-    className: "fish4",
-    fishName: "HVIDHAJ",
-    Info: "Hej! Jeg er en hvidhaj. Jeg er en stor fisk, der bor i havet. Jeg har skarpe tænder, og man kalder mig hvidhaj, fordi min mave er lys. Du kan finde mig i varme have over hele verden. Jeg kan svømme meget hurtigt! Selvom jeg ser farlig ud, er jeg mest forvirret. Nogle gange tror jeg, at mennesker er sæler.",
-  },
-  {
-    className: "fish5",
-    fishName: "ROKKE",
-    Info: "Hej! Jeg er en rokke. Jeg er næsten lige så flad som en pandekage, og jeg elsker at gemme mig under sandet. Jeg spiser muslinger og krabber. Mine øjne sidder ovenpå mit hovede, og min mund sidder nedenunder. Jeg har også en lang hale, som kan være giftig, og jeg bruger den til at forsvare mig selv. Jeg kan blive op til 7 meter lang!",
-  },
-  {
-    className: "fish6",
-    fishName: "SKILPADDE",
-    Info: "Hej! Jeg er en skilpadde. Jeg er et roligt og venligt dyr, som for det meste lever i de varme have. Jeg har ikke specielt travlt i livet - jeg er nemlig ikke hurtig. Men hvis jeg endelig skal skynde mig, kan jeg svømme helt op til 30 km i timen! Jeg svømmer en hel del og bevæger mig mange kilometer med mine finner.",
-  },
-];
-
-// Info kort om fiskene
-document.addEventListener("DOMContentLoaded", () => {
-  // Finder tooltip id
-
-  const tooltip = document.getElementById("tooltip");
-
-  function showTooltip(html) {
-    if (tooltip) {
-      tooltip.innerHTML = html;
-      tooltip.classList.add("is-visible");
-
-      setTimeout(function () {
-        tooltip.classList.remove("is-visible");
-      }, 8000);
-    }
-  }
-  fishInfo.forEach((fish) => {
-    document.querySelectorAll("." + fish.className).forEach((elem) => {
-      elem.addEventListener("click", () => {
-        const fishDetails = `
-                <strong> ${fish.fishName}</strong><br>
-                 ${fish.Info}
-                `;
-        showTooltip(fishDetails);
-      });
-    });
-  });
-});
-
 // DOM Elementer
 const getCrab = document.getElementById("crab");
 const getNemoFish = document.getElementById("nemo");
@@ -126,3 +62,51 @@ if (getTurtle) {
     soundTurtle.play();
   });
 }
+
+//Dataobjekt med information om hver fisk
+const fishInfo = {
+  crab: {
+    title: "KRABBE",
+    text: "Hej! Jeg er en krabbe. Jeg bor på stranden og i vandet, og jeg går sidelæns. Jeg har et hårdt skjold, som beskytter mig, og når jeg vokser, skifter jeg det gamle skjold ud med et nyt. Jeg spiser næsten alt - både planter, små dyr og nogle gange døde fisk. Selv om jeg ser lille ud, kan nogle af mine venner blive over en meter store.",
+  },
+  nemo: {
+    title: "KLOVNEFISK",
+    text: "Hej! Jeg er en klovnefisk. Jeg er en lille, farverig fisk med orange og hvide striber - næsten som en lille tiger i vandet. Måske har du set mig i filmen Find Nemo? Jeg bor i en søanemone, som har små stikkende arme, men de kan ikke stikke mig, fordi jeg har et særligt slimlag. Jeg elsker at svømme og lege med mine venner!",
+  },
+  pufferfish: {
+    title: "PUFFERFISK",
+    text: "Hej! Jeg er en pufferfisk og jeg bliver bogstaveligt talt oppustet, når jeg bliver stresset! Jeg kan blive op til tre gange min normale størrelse, så jeg ligner en ballon - men uden at tage på i vægt! Jeg er super giftig. Ét lille måltid af mig, og du får en evig madforgiftning. Selvom jeg ser sød ud, er jeg faktisk et af havets mest dødelige dyr. Surprise!",
+  },
+  shark: {
+    title: "HVIDHAJ",
+    text: "Hej! Jeg er en hvidhaj. Jeg er en stor fisk, der bor i havet. Jeg har skarpe tænder, og man kalder mig hvidhaj, fordi min mave er lys. Du kan finde mig i varme have over hele verden. Jeg kan svømme meget hurtigt! Selvom jeg ser farlig ud, er jeg mest forvirret. Nogle gange tror jeg, at mennesker er sæler.",
+  },
+  stingray: {
+    title: "ROKKE",
+    text: "Hej! Jeg er en rokke. Jeg er næsten lige så flad som en pandekage, og jeg elsker at gemme mig under sandet. Jeg spiser muslinger og krabber. Mine øjne sidder ovenpå mit hovede, og min mund sidder nedenunder. Jeg har også en lang hale, som kan være giftig, og jeg bruger den til at forsvare mig selv. Jeg kan blive op til 7 meter lang!",
+  },
+  turtle: {
+    title: "SKILPADDE",
+    text: "Hej! Jeg er en skilpadde. Jeg er et roligt og venligt dyr, som for det meste lever i de varme have. Jeg har ikke specielt travlt i livet - jeg er nemlig ikke hurtig. Men hvis jeg endelig skal skynde mig, kan jeg faktisk svømme hurtigt. Jeg svømmer en hel del og bevæger mig mange kilometer med mine finner.",
+  },
+};
+
+// Funktion: vis popup med HTML-indhold
+function showFishPopup(html) {
+  const popup = document.getElementById("fish-popup");
+  if (!popup) return;
+  popup.querySelector(".popupBody").innerHTML = html;
+  popup.classList.add("is-visible");
+}
+
+// Binder click-handlere til alle fisk ved at bruge deres id'er
+// Når der klikkes, hentes teksten fra fishInfo og sendes til showFishPopup
+["crab", "nemo", "pufferfish", "shark", "stingray", "turtle"].forEach((id) => {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.addEventListener("click", () => {
+    const info = fishInfo[id];
+    if (!info) return;
+    showFishPopup(`<strong>${info.title}</strong><p>${info.text}</p>`);
+  });
+});
