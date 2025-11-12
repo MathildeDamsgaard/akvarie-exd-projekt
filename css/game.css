@@ -13,10 +13,10 @@
   width: 160px;
   position: absolute;
   left: 0; /* helt i venstre side */
-  top: 50%; /* midtstillet lodret */
+  bottom: 50%; /* midtstillet lodret vha. bottom */
   transform: translateY(
-    -50%
-  ); /* flyt elementet op med 50% af egen højde => centreret */
+    50%
+  ); /* flyt elementet ned med 50% af egen højde => centreret */
 }
 
 #game {
