@@ -12,25 +12,19 @@
   height: 80px;
   width: 160px;
   position: absolute;
-  left: 0; /* helt i venstre side */
-  bottom: 50%; /* midtstillet lodret vha. bottom */
-  transform: translateY(
-    50%
-  ); /* flyt elementet ned med 50% af egen højde => centreret */
 }
 
 #game {
-  background: linear-gradient(
-    to bottom right,
-    var(--color-water2),
-    var(--color-water1)
-  );
+  /* to lag: først billede (øverst), så gradient (bagved) */
+  background: url("../img/gamebg.png"), center/auto no-repeat,
+    linear-gradient(to bottom right, var(--color-water2), var(--color-water1));
+  background-size: cover, cover;
+  background-position: center;
   width: 100%;
   min-height: 100vh; /* sikrer fuld højde */
   margin: 0;
   overflow-x: hidden; /* forhindrer hvide sider hvis noget går lidt udenfor */
   position: relative;
-  text-align: center;
 }
 
 /* fjern hvide kanter */
@@ -38,6 +32,7 @@ html,
 body {
   height: 100%;
   margin: 0;
+  padding: 0;
 }
 
 #start {
