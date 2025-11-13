@@ -36,8 +36,8 @@ const fishInfo = {
     text: "Hej! Jeg er en krabbe. Jeg bor på stranden og i vandet, og jeg går sidelæns. Jeg har et hårdt skjold, som beskytter mig, og når jeg vokser, skifter jeg det gamle skjold ud med et nyt. Jeg spiser næsten alt - både planter, små dyr og nogle gange døde fisk. Selv om jeg ser lille ud, kan nogle af mine venner blive over en meter store.",
   },
   nemo: {
-    title: "KLOVNEFISK",
-    text: "Hej! Jeg er en klovnefisk. Jeg er en lille, farverig fisk med orange og hvide striber - næsten som en lille tiger i vandet. Måske har du set mig i filmen Find Nemo? Jeg bor i en søanemone, som har små stikkende arme, men de kan ikke stikke mig, fordi jeg har et særligt slimlag. Jeg elsker at svømme og lege med mine venner!",
+    title: "KLOVNFISK",
+    text: "Hej! Jeg er en klovnfisk. Jeg er en lille, farverig fisk med orange og hvide striber - næsten som en lille tiger i vandet. Måske har du set mig i filmen Find Nemo? Jeg bor i en søanemone, som har små stikkende arme, men de kan ikke stikke mig, fordi jeg har et særligt slimlag. Jeg elsker at svømme og lege med mine venner!",
   },
   pufferfish: {
     title: "PUFFERFISK",
