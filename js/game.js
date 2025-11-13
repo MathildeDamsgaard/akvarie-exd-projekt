@@ -4,6 +4,19 @@ const dodger = document.getElementById("dodger");
 // Game over sound
 const gameoverSound = document.getElementById("gameoverSound");
 
+function playGameoverSound() {
+  gameoverSound.currentTime = 0; // Start fra begyndelsen
+  gameoverSound.play();
+}
+
+// Winner sound
+const winningSound = document.getElementById("winningSound");
+
+function playWinningSound() {
+  winningSound.play();
+  showConfettiImage();
+}
+
 //Left dodger
 function moveDodgerLeft() {
   const leftNumbers = dodger.style.left.replace("px", "");
@@ -96,14 +109,6 @@ document.addEventListener("keydown", function (e) {
 
 function playSoundOnMovement() {
   movementSound.currentTime = 0;
-}
-
-// Winner sound
-const winningSound = document.getElementById("winningSound");
-
-function playWinningSound() {
-  winningSound.play();
-  showConfettiImage();
 }
 
 // Vis et fuldt konfetti-billede som overlay
