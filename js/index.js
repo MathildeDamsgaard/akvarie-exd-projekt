@@ -12,22 +12,22 @@ const getSeaweed = document.getElementById("seaweed");
 
 // Opretter et lyd-objekt og tildeler source til den specifikke lydfil i mappen "sound"
 const soundCrab = new Audio();
-soundCrab.src = "../sound/krabbe.mp3";
+soundCrab.src = "../sound/krabbe.wav";
 
 const soundNemo = new Audio();
-soundNemo.src = "../sound/nemo.mp3";
+soundNemo.src = "../sound/nemo.wav";
 
 const soundPuffer = new Audio();
-soundPuffer.src = "../sound/pufferfisk.mp3";
+soundPuffer.src = "../sound/pufferfisk.wav";
 
 const soundShark = new Audio();
-soundShark.src = "../sound/hvidhaj.mp3";
+soundShark.src = "../sound/hvidhaj.wav";
 
 const soundStingray = new Audio();
-soundStingray.src = "../sound/rokke.mp3";
+soundStingray.src = "../sound/rokke.wav";
 
 const soundTurtle = new Audio();
-soundTurtle.src = "../sound/skilpadde.mp3";
+soundTurtle.src = "../sound/skilpadde.wav";
 
 //Dataobjekt med information om hver fisk
 const fishInfo = {
@@ -111,25 +111,25 @@ if (closeBtn) closeBtn.addEventListener("click", hideFishPopup);
     }
     switch (id) {
       case "crab":
-        currentFishSound = new Audio("../sound/krabbe.mp3");
+        currentFishSound = new Audio("../sound/krabbe.wav");
         break;
       case "nemo":
-        currentFishSound = new Audio("../sound/nemo.mp3");
+        currentFishSound = new Audio("../sound/nemo.wav");
         break;
       case "pufferfish":
-        currentFishSound = new Audio("../sound/pufferfisk.mp3");
+        currentFishSound = new Audio("../sound/pufferfisk.wav");
         break;
       case "shark":
-        currentFishSound = new Audio("../sound/hvidhaj.mp3");
+        currentFishSound = new Audio("../sound/hvidhaj.wav");
         break;
       case "stingray":
-        currentFishSound = new Audio("../sound/rokke.mp3");
+        currentFishSound = new Audio("../sound/rokke.wav");
         break;
       case "turtle":
-        currentFishSound = new Audio("../sound/skilpadde.mp3");
+        currentFishSound = new Audio("../sound/skilpadde.wav");
         break;
       case "seaweed":
-        currentFishSound = new Audio("../sound/tang.mp3");
+        currentFishSound = new Audio("../sound/tang.wav");
         break;
     }
     // Afspil lyd
