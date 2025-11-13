@@ -1,6 +1,9 @@
 "use strict";
 const dodger = document.getElementById("dodger");
 
+// Game over sound
+const gameoverSound = document.getElementById("gameoverSound");
+
 //Left dodger
 function moveDodgerLeft() {
   const leftNumbers = dodger.style.left.replace("px", "");
@@ -10,7 +13,7 @@ function moveDodgerLeft() {
     dodger.style.left = `${left - 40}px`;
   } else {
     //Gameover
-    playGameOverSound();
+    playGameoverSound();
   }
 }
 
@@ -55,7 +58,7 @@ function moveDodgerUp() {
     dodger.style.bottom = `${bottom + 40}px`;
   } else {
     //Gameover
-    playGameOverSound();
+    playGameoverSound();
   }
 }
 
@@ -66,7 +69,7 @@ function moveDodgerDown() {
     dodger.style.bottom = `${bottom - 40}px`;
   } else {
     //Gameover
-    playGameOverSound();
+    playGameoverSound();
   }
 }
 
@@ -117,4 +120,4 @@ function showConfettiImage() {
   overlay.appendChild(img);
 
   document.body.appendChild(overlay);
-};
+}
