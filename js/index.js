@@ -1,4 +1,5 @@
 "use strict";
+let currentFishSound = null; // holder styr på den aktive fiskelyd
 
 // DOM Elementer
 const getCrab = document.getElementById("crab");
@@ -27,48 +28,6 @@ soundStingray.src = "../sound/rokke.mp3";
 
 const soundTurtle = new Audio();
 soundTurtle.src = "../sound/skilpadde.mp3";
-
-if (getCrab) {
-  getCrab.addEventListener("click", () => {
-    soundCrab.play();
-  });
-}
-
-if (getNemoFish) {
-  getNemoFish.addEventListener("click", () => {
-    soundNemo.play();
-  });
-}
-
-if (getPufferFish) {
-  getPufferFish.addEventListener("click", () => {
-    soundPuffer.play();
-  });
-}
-
-if (getShark) {
-  getShark.addEventListener("click", () => {
-    soundShark.play();
-  });
-}
-
-if (getStingRay) {
-  getStingRay.addEventListener("click", () => {
-    soundStingray.play();
-  });
-}
-
-if (getTurtle) {
-  getTurtle.addEventListener("click", () => {
-    soundTurtle.play();
-  });
-}
-
-if (getSeaweed) {
-  getSeaweed.addEventListener("click", () => {
-    soundSeaweed.play();
-  });
-}
 
 //Dataobjekt med information om hver fisk
 const fishInfo = {
@@ -116,6 +75,11 @@ function hideFishPopup() {
   if (!popup) return;
   popup.classList.remove("is-visible");
   popup.setAttribute("aria-hidden", "true");
+  // Stop lyd, hvis en spiller
+  if (currentFishSound) {
+    currentFishSound.pause();
+    currentFishSound.currentTime = 0;
+  }
 }
 
 // Luk-knap
@@ -138,6 +102,37 @@ if (closeBtn) closeBtn.addEventListener("click", hideFishPopup);
   el.addEventListener("click", () => {
     const info = fishInfo[id];
     if (!info) return;
+    // Vis popup
     showFishPopup(`<strong>${info.title}</strong><p>${info.text}</p>`);
+    // Stop evt. tidligere lyd
+    if (currentFishSound) {
+      currentFishSound.pause();
+      currentFishSound.currentTime = 0;
+    }
+    switch (id) {
+      case "crab":
+        currentFishSound = new Audio("../sound/krabbe.mp3");
+        break;
+      case "nemo":
+        currentFishSound = new Audio("../sound/nemo.mp3");
+        break;
+      case "pufferfish":
+        currentFishSound = new Audio("../sound/pufferfisk.mp3");
+        break;
+      case "shark":
+        currentFishSound = new Audio("../sound/hvidhaj.mp3");
+        break;
+      case "stingray":
+        currentFishSound = new Audio("../sound/rokke.mp3");
+        break;
+      case "turtle":
+        currentFishSound = new Audio("../sound/skilpadde.mp3");
+        break;
+      case "seaweed":
+        currentFishSound = new Audio("../sound/tang.mp3"); // hvis du har en lyd
+        break;
+    }
+    // Afspil lyd
+    currentFishSound.play();
   });
 });
