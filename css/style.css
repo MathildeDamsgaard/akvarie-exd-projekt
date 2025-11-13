@@ -302,10 +302,10 @@
   border: none;
   border-radius: 1.5rem;
   cursor: pointer;
+  text-decoration: none; /* fjerner den understregede streg */
 }
 
 .closeBtn {
-  position: top;
   padding: 0.5rem 1rem;
   border-radius: 3rem;
   font-size: 1.5rem;
