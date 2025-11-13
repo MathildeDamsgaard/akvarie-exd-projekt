@@ -129,7 +129,7 @@ if (closeBtn) closeBtn.addEventListener("click", hideFishPopup);
         currentFishSound = new Audio("../sound/skilpadde.mp3");
         break;
       case "seaweed":
-        currentFishSound = new Audio("../sound/tang.mp3"); // hvis du har en lyd
+        currentFishSound = new Audio("../sound/tang.mp3");
         break;
     }
     // Afspil lyd
