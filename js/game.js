@@ -100,8 +100,27 @@ const winningSound = document.getElementById("winningSound");
 
 function playWinningSound() {
   winningSound.play();
+  showConfettiImage();
 }
 
+function showConfettiImage() {
+  // undgå duplikater
+  if (document.querySelector(".confetti-overlay")) return;
+
+  const overlay = document.createElement("div");
+  overlay.className = "confetti-overlay";
+
+  const img = document.createElement("img");
+  img.src = "img/confetti.png"; // læg dit samlede konfetti-billede her
+  img.alt = "Confetti";
+  overlay.appendChild(img);
+
+  document.body.appendChild(overlay);
+
+  // fade ud efter 2.5s, fjern efter 3s
+  setTimeout(() => overlay.classList.add("confetti-hide"), 2500);
+  setTimeout(() => overlay.remove(), 3200);
+}
 // Game over sound
 const gameoverSound = document.getElementById("gameoverSound");
 
