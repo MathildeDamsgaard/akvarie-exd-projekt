@@ -54,29 +54,23 @@ body {
   cursor: pointer;
 }
 
-/* Confetti overlay (brug dit samlede PNG) */
+/*Styling for confetti overlay */
 .confetti-overlay {
   position: fixed;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent; /* brug evt rgba(0,0,0,0.08) hvis du vil mørkne baggrunden */
   pointer-events: none;
   z-index: 9999;
+  background: transparent;
 }
-
 .confetti-overlay img {
   max-width: 100%;
   width: 100%;
   height: auto;
-  display: block;
-  opacity: 1;
-  transform: translateY(0) scale(1);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
-
-/* når klassen sættes, fades og småskaleres billedet for en blød out */
 .confetti-overlay.confetti-hide img {
   opacity: 0;
   transform: translateY(-8px) scale(1.02);
